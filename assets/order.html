@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.145.0">
-    <title>Checkout Success-Bootstrap v5.3  E-Commerce</title>
+    <title>Orders-Bootstrap v5.3  E-Commerce</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbar-fixed/">
 
@@ -104,8 +104,7 @@
             <div class="dropdown-menu" aria-labelledby="dropdown-1">
                 <a href="/admin-category.html" class="dropdown-item">Kategori</a>
                 <a href="/product-category.html" class="dropdown-item">Product</a>
-                <a href="/admin-order.html" class="dropdown-item">Order</a>
-            
+                <a href="/admin-order.html" class="dropdown-item">Ordes</a>
             </div>
         </li>
     
@@ -134,35 +133,80 @@
   </div>
 </nav>
 
-<main role="main" class="container mt-4">
+<main role="main" class="container my-5">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-3">
+        <div class="card mb-3">
+          <div class="card-header">
+            Menu
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <a href="/profile.html">Profile</a>
+            </li>
+            <li class="list-group-item">
+              <a href="/assets/order.html">Orders</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-9">
         <div class="card">
           <div class="card-header">
-            Checkout Berhasil
+            Daftar Orders
           </div>
           <div class="card-body">
-            <h5 class="card-title">Nomor Order: <strong>012345</strong></h5>
-            <p>Terima kasih, sudah berbelanja.</p>
-            <p>Silahkan lakukan pembayaran untuk bisa kami proses selanjutnya dengan cara:</p>
-            <ol>
-              <li>Lakukan pembayaran pada rekening <strong>BCA 3893672</strong> a/n PT. SSShop</li>
-              <li>Sertakan keterangan dengan nomor order: <strong>012345</strong></li>
-              <li>Total pembayaran: <strong>Rp300.000,-</strong></li>
-            </ol>
-            <p>
-              Jika sudah, silahkan kirimkan bukti transfer di halaman konfirmasi atau bisa 
-              <a href="/assets/orders-details.html">klik disini</a>!
-            </p>
-            <a href="/assets/index.html" class="btn btn-primary">
-              <i class="fas fa-angle-left me-1"></i> Kembali
-            </a>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Nomor</th>
+                  <th>Tanggal</th>
+                  <th>Total</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <a href="/assets/orders-details.html"><strong>#012345678</strong></a>
+                  </td>
+                  <td>2025/05/20</td>
+                  <td>Rp300.000,-</td>
+                  <td>
+                    <span class="badge bg-warning text-dark rounded-pill">Menunggu Pembayaran</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="/assets/orders-details.html"><strong>#012345679</strong></a>
+                  </td>
+                  <td>2025/05/21</td>
+                  <td>Rp450.000,-</td>
+                  <td>
+                    <span class="badge bg-success text-white rounded-pill">Dikirim</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <a href="/assets/orders-details.html"><strong>#012345680</strong></a>
+                  </td>
+                  <td>2025/05/22</td>
+                  <td>Rp250.000,-</td>
+                  <td>
+                    <span class="badge bg-danger text-white rounded-pill">Dibatalkan</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
     </div>
   </main>
   
+  
+
+
 <script defer src="/assets/libs/jquery/jquery-3.7.1.min.js" ></script>
 <script src="/assets/libs/bootstrap/bootstrap-5.3.5-dist/js/bootstrap.bundle.min.js"></script>
 

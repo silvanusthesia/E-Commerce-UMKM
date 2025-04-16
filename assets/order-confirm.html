@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.145.0">
-    <title>Checkout Success-Bootstrap v5.3  E-Commerce</title>
+    <title>Konfirmasi Order-Bootstrap v5.3  E-Commerce</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbar-fixed/">
 
@@ -104,8 +104,7 @@
             <div class="dropdown-menu" aria-labelledby="dropdown-1">
                 <a href="/admin-category.html" class="dropdown-item">Kategori</a>
                 <a href="/product-category.html" class="dropdown-item">Product</a>
-                <a href="/admin-order.html" class="dropdown-item">Order</a>
-            
+                <a href="/admin-order.html" class="dropdown-item">Orders</a>
             </div>
         </li>
     
@@ -134,30 +133,59 @@
   </div>
 </nav>
 
-<main role="main" class="container mt-4">
+<main role="main" class="container my-5">
     <div class="row">
-      <div class="col-md-12">
+      <!-- Sidebar Menu -->
+      <div class="col-md-3">
+        <div class="card mb-3">
+          <div class="card-header">Menu</div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="/">Profile</a></li>
+            <li class="list-group-item"><a href="/assets/order.html">Orders</a></li>
+          </ul>
+        </div>
+      </div>
+  
+      <!-- Order Detail -->
+      <div class="col-md-9">
         <div class="card">
-          <div class="card-header">
-            Checkout Berhasil
+          <div class="card-header d-flex justify-content-between align-items-center">
+            <span>Konfirmasi Order #0123456</span>
+            <span class="badge bg-info text-dark rounded-pill">Menunggu Pembayaran</span>
           </div>
-          <div class="card-body">
-            <h5 class="card-title">Nomor Order: <strong>012345</strong></h5>
-            <p>Terima kasih, sudah berbelanja.</p>
-            <p>Silahkan lakukan pembayaran untuk bisa kami proses selanjutnya dengan cara:</p>
-            <ol>
-              <li>Lakukan pembayaran pada rekening <strong>BCA 3893672</strong> a/n PT. SSShop</li>
-              <li>Sertakan keterangan dengan nomor order: <strong>012345</strong></li>
-              <li>Total pembayaran: <strong>Rp300.000,-</strong></li>
-            </ol>
-            <p>
-              Jika sudah, silahkan kirimkan bukti transfer di halaman konfirmasi atau bisa 
-              <a href="/assets/orders-details.html">klik disini</a>!
-            </p>
-            <a href="/assets/index.html" class="btn btn-primary">
-              <i class="fas fa-angle-left me-1"></i> Kembali
-            </a>
-          </div>
+  
+          <form action="#" method="POST" enctype="multipart/form-data">
+            <div class="card-body">
+              <div class="mb-3">
+                <label for="transaksi" class="form-label">Transaksi</label>
+                <input type="text" class="form-control" id="transaksi" value="01234123" readonly>
+              </div>
+  
+              <div class="mb-3">
+                <label for="rekening" class="form-label">Dari rekening a/n</label>
+                <input type="text" class="form-control" id="rekening" name="rekening">
+              </div>
+  
+              <div class="mb-3">
+                <label for="nominal" class="form-label">Sebesar</label>
+                <input type="number" class="form-control" id="nominal" name="nominal">
+              </div>
+  
+              <div class="mb-3">
+                <label for="catatan" class="form-label">Catatan</label>
+                <textarea class="form-control" id="catatan" name="catatan" rows="4"></textarea>
+              </div>
+  
+              <div class="mb-3">
+                <label for="bukti" class="form-label">Bukti Transfer</label>
+                <input class="form-control" type="file" id="bukti" name="image">
+              </div>
+            </div>
+  
+            <div class="card-footer">
+              <button type="submit" class="btn btn-success">Konfirmasi Pembayaran</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>

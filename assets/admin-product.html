@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.145.0">
-    <title>Checkout-Bootstrap v5.3 E-Commerce</title>
+    <title>Login-Bootstrap v5.3  E-Commerce</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbar-fixed/">
 
@@ -115,7 +115,6 @@
         <li class="nav-item">
             <a href="/assets/cart.html" class="nav-link"><i class="fas fa-shopping-cart"></i>cart (0)</a>
         </li>
-        
         <li class="nav-item">
             <a href="/assets/login.html" class="nav-link">Login</a>
         </li>
@@ -136,79 +135,119 @@
   </div>
 </nav>
 
-<main role="main" class="container mt-4">
-    <div class="row">
-      <!-- Form Pengiriman -->
-      <div class="col-md-8">
-        <div class="card">
-          <div class="card-header">
-            Formulir Alamat Pengiriman
-          </div>
-          <div class="card-body">
-            <form action="">
-              <div class="mb-3">
-                <label for="nama" class="form-label">Nama</label>
-                <input type="text" class="form-control" id="nama" name="name" placeholder="Masukan nama penerima">
-                <div class="form-text text-danger">Nama harus diisi.</div>
+<style>
+    .btn-toska {
+      background-color: #00bcd4;
+      color: white;
+    }
+    .btn-toska:hover {
+      background-color: #0097a7;
+      color: white;
+    }
+    </style>
+    
+    <main role="main" class="container my-5">
+        <div class="row">
+          <div class="col-md-10 mx-auto">
+            <div class="card shadow-sm">
+      
+              <!-- Header -->
+              <div class="card-header bg-light d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <span class="fw-bold text-dark">Produk</span>
+                  <a href="/assets/admin-product-form.html" class="btn btn-sm btn-secondary text-white">Tambah</a>
+                </div>
+      
+                <!-- Search form -->
+                <form action="#" class="d-flex">
+                  <div class="input-group input-group-sm">
+                    <input type="text" class="form-control text-center" placeholder="Cari">
+                    <button class="btn btn-toska" type="submit">
+                      <i class="fas fa-search"></i>
+                    </button>
+                    <a href="#" class="btn btn-toska">
+                      <i class="fas fa-times"></i>
+                    </a>
+                  </div>
+                </form>
               </div>
-              <div class="mb-3">
-                <label for="alamat" class="form-label">Alamat</label>
-                <textarea class="form-control" id="alamat" name="address" rows="5"></textarea>
-                <div class="form-text text-danger">Alamat harus diisi.</div>
-              </div>
-              <div class="mb-3">
-                <label for="telepon" class="form-label">Telepon</label>
-                <input type="text" class="form-control" id="telepon" name="phone" placeholder="Masukan nomor telepon penerima">
-                <div class="form-text text-danger">Nomor telepon harus diisi.</div>
-              </div>
-              <button type="submit" class="btn btn-primary">Simpan</button>
-            </form>
-          </div>
-        </div>
-      </div>
+      
+              <!-- Body -->
+              <div class="card-body">
+                <table class="table align-middle">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Produk</th>
+                      <th scope="col">Kategori</th>
+                      <th scope="col">Harga</th>
+                      <th scope="col">Stock</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>
+                        <div class="d-flex align-items-center gap-2">
+                          <img src="https://placehold.co/70x70" alt="Foto Produk" class="rounded-circle" width="40" height="40">
+                          <span>Hand Bags</span>
+                        </div>
+                      </td>
+                      <td>
+                        <span class="badge bg-primary">
+                          <i class="fas fa-tags"></i> Hand Bags
+                        </span>
+                      </td>
+                      <td>Rp100.000,-</td>
+                      <td>Tersedia</td>
+                      <td>
+                        <div class="d-flex gap-1">
+                          <a href="#" class="btn btn-sm btn-light">
+                            <i class="fas fa-edit text-info"></i>
+                          </a>
+                          <form action="#" method="post" onsubmit="return confirm('Are you sure?')">
+                            <button type="submit" class="btn btn-sm btn-light">
+                              <i class="fas fa-trash text-danger"></i>
+                            </button>
+                          </form>
+                        </div>
+                      </td>
+                    </tr>
+                    <!-- Tambahkan baris lainnya di sini -->
+                  </tbody>
+                </table>
+      
+                <!-- Pagination -->
+                <nav aria-label="Page navigation example">
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a class="page-link" href="#">Previous</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">Next</a>
+                    </li>
+                  </ul>
+                </nav>
+      
+              </div> <!-- card-body -->
+            </div> <!-- card -->
+          </div> <!-- col -->
+        </div> <!-- row -->
+      </main>
+      
   
-      <!-- Sidebar -->
-      <div class="col-md-4">
-        <!-- Pencarian -->
-       
-        <!-- Kategori -->
-        <div class="card mb-3">
-          <div class="card-header">
-            Cart
-          </div>
-         <div class="card-body">
-            <table class="table">
-                <thead>
-                    <tr>
-                    <th>Product</th>
-                    <th>Qty</th>
-                    <th>Harga</th>
-                </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                    <td>Product Title</td>
-                    <td>3</td>
-                    <td>Rp100.000,-</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Subtotal</td>
-                        <td>Rp300.000,-</td>
-                    </tr>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <th colspan="2">Total</th>
-                        <th>Rp300.000,-</th>
-                    </tr>
-                </tfoot>
-            </table>
-         </div>
-        </div>
-      </div>
-    </div>
-  </main>
-  
+
+
 <script defer src="/assets/libs/jquery/jquery-3.7.1.min.js" ></script>
 <script src="/assets/libs/bootstrap/bootstrap-5.3.5-dist/js/bootstrap.bundle.min.js"></script>
 

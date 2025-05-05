@@ -147,80 +147,88 @@
     </style>
     
     <main role="main" class="container my-5">
-      <div class="row">
-        <div class="col-md-10 mx-auto">
-          <div class="card shadow-sm">
-            <div class="card-header bg-light d-flex align-items-center justify-content-between">
-              <div class="d-flex align-items-center gap-2">
-                <span class="fw-bold text-dark">Pengguna</span>
-                <a href="/assets/admin-users-form.html" class="btn btn-sm btn-secondary text-white">Tambah</a>
+        <div class="row">
+          <div class="col-md-10 mx-auto">
+            <!-- Kartu Detail Order -->
+            <div class="card mb-4">
+              <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Detail Order <span class="text-muted">#0123456</span></h5>
+                <span class="badge bg-info text-dark rounded-pill">Menunggu Pembayaran</span>
               </div>
-    
-              <form action="#" class="d-flex">
-                <div class="input-group input-group-sm">
-                  <input type="text" class="form-control text-center" placeholder="Cari">
-                  <button class="btn btn-toska" type="submit">
-                    <i class="fas fa-search"></i>
-                  </button>
-                  <a href="#" class="btn btn-toska">
-                    <i class="fas fa-times"></i>
-                  </a>
+              <div class="card-body">
+                <p class="mb-1"><strong>Nama:</strong> Nama Penerima</p>
+                <p class="mb-1"><strong>Telepon:</strong> 089966123</p>
+                <p><strong>Alamat:</strong> Jl. Pancasila, No. 115</p>
+      
+                <!-- Tabel Produk -->
+                <div class="table-responsive mt-4">
+                  <table class="table table-bordered align-middle">
+                    <thead class="table-light">
+                      <tr>
+                        <th>Produk</th>
+                        <th class="text-center">Harga</th>
+                        <th class="text-center">Jumlah</th>
+                        <th class="text-center">Subtotal</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="d-flex align-items-center">
+                          <img src="https://placehold.co/50x50" alt="Gambar Produk" class="me-2 rounded">
+                          <strong>Product Title</strong>
+                        </td>
+                        <td class="text-center">Rp100.000,-</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">Rp100.000,-</td>
+                      </tr>
+                      <tr>
+                        <td colspan="3" class="text-end"><strong>Total:</strong></td>
+                        <td class="text-center"><strong>Rp100.000,-</strong></td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
-              </form>
               </div>
-          <div class="card-body">
-            <table class="table align-middle">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Pengguna</th>
-                  <th scope="col">E-Mail</th>
-                  <th scope="col">Role</th>
-                  <th scope="col">Status</th>
-                  <th scope="col">Aksi</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>
-                    <div class="d-flex align-items-center gap-2">
-                      <img src="https://placehold.co/70x70" alt="Foto Admin" class="rounded-circle" width="40" height="40">
-                      <span>Admin</span>
-                    </div>
-                  </td>
-                  <td>admin@gmail.com</td>
-                  <td>Admin</td>
-                  <td>Aktif</td>
-                  <td>
-                    <div class="d-flex gap-1">
-                      <a href="#" class="btn btn-sm btn-light">
-                        <i class="fas fa-edit text-info"></i>
-                      </a>
-                      <form action="#" method="post" onsubmit="return confirm('Are you sure?')">
-                        <button type="submit" class="btn btn-sm btn-light">
-                          <i class="fas fa-trash text-danger"></i>
-                        </button>
-                      </form>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <nav aria-label="Page navigation example">
-              <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">Next</a></li>
-              </ul>
-            </nav>
+              <div class="card-footer">
+                <!-- Form Update Status -->
+                <form action="#">
+                  <div class="input-group">
+                    <select class="form-select">
+                      <option value="waiting">Menunggu Pembayaran</option>
+                      <option value="paid">Dibayar</option>
+                      <option value="delivered">Dikirim</option>
+                      <option value="cancel">Batal</option>
+                    </select>
+                    <button class="btn btn-primary" type="submit">Simpan</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+      
+            <!-- Bukti Transfer -->
+            <div class="row">
+              <div class="col-md-8">
+                <div class="card h-100">
+                  <div class="card-header">
+                    Bukti Transfer
+                  </div>
+                  <div class="card-body">
+                    <p>Dari Rekening: 0932145</p>
+                    <p>Atas Nama: IDStack</p>
+                    <p>Nominal: Rp900.000,-</p>
+                    <p>Catatan: -</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <img src="https://placehold.co/150x200" alt="Bukti Transfer" class="img-fluid rounded shadow-sm">
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </main>
+      </main>
+      
+      
   
 
 
